@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+const { Observable } =  require('rxjs/Observable');
 
 const httpObservable = (url, urlBody) => {
   return Observable.create(observer => {
@@ -21,4 +21,4 @@ const httpObservable = (url, urlBody) => {
   });
 }
 
-export default httpObservable;
+module.exports = httpObservable;

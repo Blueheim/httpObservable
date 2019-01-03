@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Blueheim/httpObservable#readme",
   "dependencies": {
-    "rxjs": "^6.3.3"
+    "rxjs": "^6.3.3",
+    "rxjs-compat": "^6.3.3"
   }
 }
