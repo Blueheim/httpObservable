@@ -1,2 +1,2 @@
 # httpObservable
-A simple function for create cancelable http observable
+A simple function for creation of cancelable http observable
