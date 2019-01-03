@@ -1,0 +1,28 @@
+{
+  "name": "httpobservable",
+  "version": "1.0.0",
+  "description": "A simple function for creation of cancelable http observable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blueheim/httpObservable.git"
+  },
+  "keywords": [
+    "http",
+    "observable",
+    "fetch",
+    "abort"
+  ],
+  "author": "Xavier Deroeux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blueheim/httpObservable/issues"
+  },
+  "homepage": "https://github.com/Blueheim/httpObservable#readme",
+  "dependencies": {
+    "rxjs": "^6.3.3"
+  }
+}
