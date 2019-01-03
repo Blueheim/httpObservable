@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 
-const httpObservable = (url, urlBody) {
+const httpObservable = (url, urlBody) => {
   return Observable.create(observer => {
     const controller = new AbortController();
     const signal = controller.signal;
