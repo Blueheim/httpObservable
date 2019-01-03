@@ -4,7 +4,7 @@
   "description": "A simple function for creation of cancelable http observable",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish:patch": "npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
