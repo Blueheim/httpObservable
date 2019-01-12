@@ -7,7 +7,11 @@ const httpObservable = (url, urlBody) => {
 
     window.fetch(url, { ...urlBody, signal})
     .then(response => {
-      return response.json();
+      if (response.ok) {
+        return response.json();
+      } else {
+        observer.error('Request failed with status code:' + response.status);
+      }
     })
     .then(body => {
       observer.next(body);
