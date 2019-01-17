@@ -4,12 +4,17 @@
   "description": "A simple function for creation of cancelable http observable",
   "main": "index.js",
   "scripts": {
+    "build": "babel index.js --out-file lib/index.js",
     "publish:patch": "npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Blueheim/httpObservable.git"
   },
+  "files": [
+    "lib",
+    "README.md"
+  ],
   "keywords": [
     "http",
     "observable",
@@ -25,5 +30,10 @@
   "dependencies": {
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3"
   }
 }
