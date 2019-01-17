@@ -1,6 +1,6 @@
 {
   "name": "simplehttpobservable",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A simple function for creation of cancelable http observable",
   "main": "index.js",
   "scripts": {
