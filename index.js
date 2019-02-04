@@ -7,10 +7,9 @@ const httpObservable = (url, urlParams = {}, urlBody = {}) => {
 
     const urlInstance = new URL(url);
 
-    console.log(URLSearchParams);
     urlInstance.search = new URLSearchParams(urlParams);
 
-    fetch(url, { ...urlBody, signal })
+    fetch(urlInstance, { ...urlBody, signal })
       .then(response => {
         if (response.ok) {
           return response.json();
