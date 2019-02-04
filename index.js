@@ -1,6 +1,4 @@
 const { Observable } = require('rxjs/Observable');
-const URLSearchParams = require('@ungap/url-search-params');
-//require('whatwg-fetch');
 
 const httpObservable = (url, urlParams = {}, urlBody = {}) => {
   return Observable.create(observer => {

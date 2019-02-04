@@ -29,10 +29,8 @@
   },
   "homepage": "https://github.com/Blueheim/httpObservable#readme",
   "dependencies": {
-    "@ungap/url-search-params": "^0.1.2",
     "rxjs": "^6.3.3",
-    "rxjs-compat": "^6.3.3",
-    "whatwg-fetch": "^3.0.0"
+    "rxjs-compat": "^6.3.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
