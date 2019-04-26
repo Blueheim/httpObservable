@@ -1,15 +1,15 @@
 const { Observable } = require('rxjs/Observable');
 
-const httpObservable = (url, urlParams = {}, urlBody = {}) => {
+const httpObservable = ({ url, params = {}, body = {} }) => {
   return Observable.create(observer => {
     const controller = new AbortController();
     const signal = controller.signal;
 
     const urlInstance = new URL(url);
 
-    urlInstance.search = new URLSearchParams(urlParams);
+    urlInstance.search = new URLSearchParams(params);
 
-    fetch(urlInstance, { ...urlBody, signal })
+    fetch(urlInstance, { ...body, signal })
       .then(response => {
         if (response.ok) {
           return response.json();

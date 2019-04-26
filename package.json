@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel index.js --out-file lib/index.js",
+    "publish:major": "npm version major && npm publish",
     "publish:patch": "npm version patch && npm publish",
     "publish:minor": "npm version minor && npm publish"
   },
