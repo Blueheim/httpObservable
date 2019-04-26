@@ -1,6 +1,6 @@
 const { Observable } = require('rxjs/Observable');
 
-const httpObservable = ({ url, params = {}, body = {} }) => {
+const httpObservable = ({ url, params = {}, options = {} }) => {
   return Observable.create(observer => {
     const controller = new AbortController();
     const signal = controller.signal;
@@ -9,7 +9,7 @@ const httpObservable = ({ url, params = {}, body = {} }) => {
 
     urlInstance.search = new URLSearchParams(params);
 
-    fetch(urlInstance, { ...body, signal })
+    fetch(urlInstance, { ...options, signal })
       .then(response => {
         if (response.ok) {
           return response.json();
@@ -17,8 +17,8 @@ const httpObservable = ({ url, params = {}, body = {} }) => {
           observer.error('Request failed with status code:' + response.status);
         }
       })
-      .then(body => {
-        observer.next(body);
+      .then(data => {
+        observer.next(data);
         observer.complete();
       })
       .catch(err => {
