@@ -11,15 +11,17 @@ const httpObservable = ({ url, params = {}, options = {} }) => {
 
     fetch(urlInstance, { ...options, signal })
       .then(response => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          observer.error(response);
-        }
-      })
-      .then(data => {
-        observer.next(data);
-        observer.complete();
+        response.json().then(data => {
+          if (response.ok) {
+            observer.next(data);
+            observer.complete();
+          } else {
+            observer.error({
+              status: response.status,
+              data: data,
+            });
+          }
+        });
       })
       .catch(err => {
         observer.error(err);
