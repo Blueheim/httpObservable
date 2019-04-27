@@ -14,7 +14,7 @@ const httpObservable = ({ url, params = {}, options = {} }) => {
         if (response.ok) {
           return response.json();
         } else {
-          observer.error('Request failed with status code:' + response.status);
+          observer.error(response);
         }
       })
       .then(data => {
